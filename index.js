@@ -3,7 +3,7 @@ const PORT = 4399;
 
 app.listen(
     PORT,
-    () => console.log('running')
+    () => console.log(`running on port: ${PORT}...`)
 )
 
 app.get('/test', (req, res) => {
