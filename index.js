@@ -7,8 +7,9 @@ app.listen(
 )
 
 app.get('/keyword/summarize', (req, res) => {
+    console.log('Get /keyword/summarize');
     const fs = require('fs')
-    fs.readFile('./data.json', 'utf8', (err, data) => {
+    fs.readFile('data.json', 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading the file:', err);
             res.status(400).send();
