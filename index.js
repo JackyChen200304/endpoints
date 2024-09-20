@@ -6,6 +6,12 @@ app.listen(
     () => console.log('running')
 )
 
+app.get('/test', (req, res) => {
+    res.status(200).send({
+        mytestdata: 'this is test'
+    })
+});
+
 app.get('/keyword/summarize', (req, res) => {
     console.log('Get /keyword/summarize');
     const fs = require('fs')
